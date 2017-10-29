@@ -3,7 +3,7 @@ import os
 import io
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='f.',description="Selfbot Made By Shadow Tech Company Owner: Free TNT#5796\n\nHelp Commands", self_bot=True)
+bot = commands.Bot(command_prefix='f.',self_bot=True)
 # IMPORTANT!
 # Change The Prefix f. To Anything You Want
 # Change Owner ID To Your ID 
