@@ -18,3 +18,8 @@ async def on_ready
 async def Ping
     """Pong! Check If Bot Is Working"""
     await ctx.send("Pong!")
+    
+if not os.environ.get('TOKEN'):
+  print("no token found REEEE!")
+bot.run(os.environ.get('TOKEN').strip('\"'))
+ 
