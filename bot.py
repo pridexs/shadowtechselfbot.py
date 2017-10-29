@@ -7,7 +7,8 @@ bot = commands.Bot(command_prefix = 'f.', self_bot = True)
 # Change The Prefix f. To Anything You Want
 # Change Owner ID To Your ID 
 
-async def on_ready:
+@bot.event
+async def on_ready():
     print("Selfbot Online And Succesfully Installed")
     print("_________________________")
     print("Creator: Free TNT#5796")
