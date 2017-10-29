@@ -13,6 +13,18 @@ async def on_ready():
     print("_________________________")
     print("Creator: Free TNT#5796")
     
+@property
+def token(self):
+    '''Returns your token wherever it is'''
+    with open('data/config.json') as f:
+        config = json.load(f)
+        if config.get('TOKEN') == "LOL":
+            if not os.environ.get('TOKEN'):
+                print("Navigate To config.json in data folder and add your token or add A TOKEN config var in heroku")
+        else:
+            token = config.get('TOKEN').strip('\"')
+    return os.environ.get('TOKEN') or token
+
 @bot.command()
 async def Ping(ctx):
     """Pong! Check If Bot Is Working"""
