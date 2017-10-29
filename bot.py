@@ -8,14 +8,14 @@ bot = commands.Bot(command_prefix='f.',self_bot=True)
 # Change The Prefix f. To Anything You Want
 # Change Owner ID To Your ID 
 
-@bot.event()
-async def on_ready
+@bot.event
+async def on_ready(ctx):
     print("Selfbot Online And Succesfully Installed")
     print("_________________________")
     print("Creator: Free TNT#5796")
     
 @bot.command()
-async def Ping
+async def Ping(ctx):
     """Pong! Check If Bot Is Working"""
     await ctx.send("Pong!")
     
