@@ -14,7 +14,7 @@ async def on_ready():
     print("Creator: Free TNT#5796")
     
 @property
-def token(self):
+def token():
     '''Returns your token wherever it is'''
     with open('data/config.json') as f:
         config = json.load(f)
