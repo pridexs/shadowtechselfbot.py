@@ -2,7 +2,7 @@
 # Shadow Tech™ Selfbot
 <html>
 <head>
-<title>Shadow Tech™ Discord Selfbot</title>
+Shadow Tech™ Discord Selfbot
 </head>
 <body>
 This Is A Selfbot For Discord Keep Looking And We'll Teach You How To Install It
