@@ -47,11 +47,11 @@ def init(bot, token=None):
         print(e)
 
 @staticmethod
-    async def get_pre(bot, message):
-        '''Returns the prefix'''
-        with open('data/config.json') as f:
-            prefix = json.load(f).get('PREFIX')
-        return os.environ.get('PREFIX') or prefix or 'cr.'
+async def get_pre(bot, message):
+    '''Returns the prefix'''
+    with open('data/config.json') as f:
+        prefix = json.load(f).get('PREFIX')
+    return os.environ.get('PREFIX') or prefix or 'cr.'
 
 @bot.command()
 async def Ping(ctx):
