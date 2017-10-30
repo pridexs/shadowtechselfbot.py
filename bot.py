@@ -20,7 +20,7 @@ def token():
         config = json.load(f)
         if config.get('TOKEN') == "LOL":
             if not os.environ.get('TOKEN'):
-                print("Navigate To config.json in data folder and add your token or add A TOKEN config var in heroku")
+                run_wizard()
         else:
             token = config.get('TOKEN').strip('\"')
     return os.environ.get('TOKEN') or token
