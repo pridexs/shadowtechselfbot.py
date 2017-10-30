@@ -31,8 +31,24 @@ def __init__(self, **attrs):
         self._add_commands()
         self.load_extensions()
 
+def _add_commands(self):
+    '''Adds commands automatically'''
+    for attr in dir(self):
+        cmd = getattr(self, attr)
+        if isinstance(cmd, commands.Command):
+            self.add_command(cmd)
 
-@bot.event
+def load_extensions(self, cogs=None, path='cogs.'):
+    '''Loads the default set of extensions or a separate one if given'''
+    for extension in cogs or self._extensions:
+        try:
+            self.load_extension(f'{path}{extension}')
+            print(f'Loaded extension: {extension}')
+        except Exception as e:
+            print(f'LoadError: {extension}\n'
+                  f'type(e).__name__: {e}')
+
+
 async def on_ready():
     print("Selfbot Online And Succesfully Installed")
     print("_________________________")
