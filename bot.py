@@ -2,6 +2,9 @@ import discord
 import os
 import io
 from discord.ext import commands
+import re
+import sys
+import json
 # bot = commands.Bot(command_prefix = 'f.', self_bot = True)
 # IMPORTANT!
 # Change The Prefix f. To Anything You Want
