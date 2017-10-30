@@ -25,12 +25,22 @@ def token():
             token = config.get('TOKEN').strip('\"')
     return os.environ.get('TOKEN') or token
 
+@classmethod
+    def init(bot, token=None):
+        '''Starts the actual selfbot'''
+        selfbot = bot()
+        safe_token = token or selfbot.token.strip('\"')
+        try:
+            selfbot.run(safe_token, bot=False, reconnect=True)
+        except Exception as e:
+            print(e)
+
 @bot.command()
 async def Ping(ctx):
     """Pong! Check If Bot Is Working"""
     await ctx.send("Pong!")
     
-if not os.environ.get('TOKEN'):
-  print("no token found REEEE!")
-bot.run(os.environ.get('TOKEN').strip('\"'))
- 
+# if not os.environ.get('TOKEN'):
+#   print("no token found REEEE!")
+# bot.run(os.environ.get('TOKEN').strip('\"'))
+# turning them in to comments now might need it later  
