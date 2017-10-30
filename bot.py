@@ -45,7 +45,7 @@ def token():
         config = json.load(f)
         if config.get('TOKEN') == "your_token_here":
             if not os.environ.get('TOKEN'):
-                run_wizard()
+                self.run_wizard()
         else:
             token = config.get('TOKEN').strip('\"')
     return os.environ.get('TOKEN') or token
