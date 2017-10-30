@@ -6,6 +6,7 @@ import re
 import sys
 import json
 import aiohttp
+import psutil
 # bot = commands.Bot(command_prefix = 'f.', self_bot = True)
 # IMPORTANT!
 # Change The Prefix f. To Anything You Want
