@@ -26,14 +26,14 @@ def token():
     return os.environ.get('TOKEN') or token
 
 @classmethod
-    def init(bot, token=None):
-        '''Starts the actual selfbot'''
-        selfbot = bot()
-        safe_token = token or selfbot.token.strip('\"')
-        try:
-            selfbot.run(safe_token, bot=False, reconnect=True)
-        except Exception as e:
-            print(e)
+def init(bot, token=None):
+    '''Starts the actual selfbot'''
+    selfbot = bot()
+    safe_token = token or selfbot.token.strip('\"')
+    try:
+        selfbot.run(safe_token, bot=False, reconnect=True)
+    except Exception as e:
+        print(e)
 
 @bot.command()
 async def Ping(ctx):
