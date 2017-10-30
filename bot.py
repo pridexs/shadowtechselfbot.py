@@ -83,8 +83,8 @@ async def get_pre(bot, message):
         prefix = json.load(f).get('PREFIX')
     return os.environ.get('PREFIX') or prefix or 'cr.'
 
-@bot.command()
-async def Ping(ctx):
+@commands.command()
+async def Ping(self, ctx):
     """Pong! Check If Bot Is Working"""
     await ctx.send("Pong!")
     
