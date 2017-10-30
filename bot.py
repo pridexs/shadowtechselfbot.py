@@ -32,7 +32,7 @@ def __init__(self, **attrs):
         self.load_extensions()
 
 
- @bot.event
+@bot.event
 async def on_ready():
     print("Selfbot Online And Succesfully Installed")
     print("_________________________")
