@@ -81,7 +81,7 @@ async def get_pre(bot, message):
     '''Returns the prefix'''
     with open('data/config.json') as f:
         prefix = json.load(f).get('PREFIX')
-    return os.environ.get('PREFIX') or prefix or 'cr.'
+    return os.environ.get('PREFIX') or prefix or 'f.'
 
 @commands.command()
 async def Ping(self, ctx):
