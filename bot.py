@@ -72,6 +72,9 @@ async def Ping(ctx):
     """Pong! Check If Bot Is Working"""
     await ctx.send("Pong!")
     
+if __name__ == '__main__':
+    Selfbot.init()
+
 # if not os.environ.get('TOKEN'):
 #   print("no token found REEEE!")
 # bot.run(os.environ.get('TOKEN').strip('\"'))
