@@ -51,7 +51,30 @@ class Selfbot(commands.Bot):
                 print(f'LoadError: {extension}\n'
                       f'type(e).__name__: {e}')
 
+    async def on_command(self, ctx):
+        cmd = ctx.command.qualified_name.replace(' ', '_')
+        self.commands_used[cmd] += 1
 
+    async def process_commands(self, message):
+        '''Utilizes the CustomContext subclass of discord.Content'''
+        ctx = await self.get_context(message, cls=CustomContext)
+        if ctx.command is None:
+            return
+        await self.invoke(ctx)
+ 
+    async def on_message(self, message):
+       '''Responds only to yourself'''
+       if message.author.id != self.user.id:
+            return
+        self.messages_sent += 1
+        self.last_message = time.time()
+        await self.process_commands(message)
+ 
+    def get_server(self, id):
+        return discord.utils.get(self.guilds, id=id)
+
+
+    
     async def on_ready(self):
         print("Selfbot Online And Succesfully Installed")
         print("_________________________")
