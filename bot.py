@@ -63,12 +63,12 @@ class Selfbot(commands.Bot):
         await self.invoke(ctx)
  
     async def on_message(self, message):
-       '''Responds only to yourself'''
-       if message.author.id != self.user.id:
-            return
-        self.messages_sent += 1
-        self.last_message = time.time()
-        await self.process_commands(message)
+        '''Responds only to yourself'''
+        if message.author.id != self.user.id:
+             return
+         self.messages_sent += 1
+         self.last_message = time.time()
+         await self.process_commands(message)
  
     def get_server(self, id):
         return discord.utils.get(self.guilds, id=id)
