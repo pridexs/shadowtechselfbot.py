@@ -58,7 +58,7 @@ class Selfbot(commands.Bot):
         print("Creator: Free TNT#5796")
     
     @property
-    def token():
+    def token(self):
         '''Returns your token wherever it is'''
         with open('data/config.json') as f:
             config = json.load(f)
