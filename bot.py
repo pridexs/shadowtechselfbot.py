@@ -24,15 +24,15 @@ class Selfbot(commands.Bot):
     _mention_pattern = re.compile('|'.join(_mentions_transforms.keys()))
 
     def __init__(self, **attrs):
-            super().__init__(command_prefix=self.get_pre, self_bot=True)
-            self.session = aiohttp.ClientSession(loop=self.loop)
-            self.process = psutil.Process()
-            self._extensions = [x.replace('.py', '') for x in os.listdir('cogs') if x.endswith('.py')]
-            self.last_message = None
-            self.messages_sent = 0
-            self.commands_used = defaultdict(int)
-            self._add_commands()
-            self.load_extensions()
+        super().__init__(command_prefix=self.get_pre, self_bot=True)
+        self.session = aiohttp.ClientSession(loop=self.loop)
+        self.process = psutil.Process()
+        self._extensions = [x.replace('.py', '') for x in os.listdir('cogs') if x.endswith('.py')]
+        self.last_message = None
+        self.messages_sent = 0
+        self.commands_used = defaultdict(int)
+        self._add_commands()
+        self.load_extensions()
 
     def _add_commands(self):
         '''Adds commands automatically'''
