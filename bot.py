@@ -18,7 +18,7 @@ import time
 # Nvm ignore it 
 
 class Selfbot(commands.Bot):
-    '''A Discord Selfbot Made By Free TNT#5796'''
+    '''A Dank Discord Selfbot Made By dat banana boi #1982.'''
     _mentions_transforms = {
         '@everyone': '@\u200beveryone',
         '@here': '@\u200bhere'
