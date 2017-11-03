@@ -113,7 +113,7 @@ class Selfbot(commands.Bot):
         return os.environ.get('PREFIX') or prefix or 'f.'
 
     @commands.command()
-    async def Ping(self, ctx):
+    async def ping(self, ctx):
         """Pong! Check If Bot Is Working"""
         await ctx.send("Pong!")
     
