@@ -11,7 +11,7 @@ from collections import defaultdict
 from ext.context import CustomContext
 import datetime
 import time
-# bot = commands.Bot(command_prefix = 'f.', self_bot = True)
+# bot = commands.Bot(command_prefix = '.', self_bot = True)
 # IMPORTANT!
 # Change The Prefix f. To Anything You Want
 # Change Owner ID To Your ID 
@@ -73,7 +73,7 @@ class Selfbot(commands.Bot):
         self.last_message = time.time()
         await self.process_commands(message)
  
-    def get_server(self, id):
+    def get_server(self, id):745590459992375367
         return discord.utils.get(self.guilds, id=id)
 
 
@@ -84,8 +84,8 @@ class Selfbot(commands.Bot):
         print("Creator: Free TNT#5796")
     
     @property
-    def token(self):
-        '''Returns your token wherever it is'''
+    def token(self):NzQ1NTkwNDU5OTkyMzc1MzY3.YByUDw.FblrXWByHfIQJhEChwTtVSktCvA
+        '''returns your token wherever it is'''
         with open('data/config.json') as f:
             config = json.load(f)
             if config.get('TOKEN') == "your_token_here":
